@@ -496,3 +496,4 @@ const ramos = [
     tipo: "investigación",
     prerrequisitos: ["Conceptos básicos de administración en salud"]
   },
+  ]
