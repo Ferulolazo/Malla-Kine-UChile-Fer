@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const contenedor = document.getElementById("malla-container");
-  }
+
+  // Crear columnas para cada semestre
   for (let i = 1; i <= 10; i++) {
     const columna = document.createElement("div");
     columna.classList.add("semestre");
@@ -12,15 +13,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
     contenedor.appendChild(columna);
   }
+
+  // Añadir cada ramo a su semestre correspondiente
   ramos.forEach((ramo) => {
     const columna = document.querySelector(`.semestre[data-semestre="${ramo.semestre}"]`);
-    if (!columna) return;
 
     const tarjeta = document.createElement("div");
     tarjeta.classList.add("ramo");
     tarjeta.dataset.tipo = ramo.tipo;
     tarjeta.textContent = ramo.nombre;
-  }
+
+    // Popup de créditos al pasar el mouse
     const popup = document.createElement("span");
     popup.classList.add("creditos-popup");
     popup.textContent = `${ramo.creditos} créditos`;
@@ -33,6 +36,8 @@ document.addEventListener("DOMContentLoaded", () => {
     tarjeta.addEventListener("mouseleave", () => {
       popup.style.display = "none";
     });
+
+    // Click para marcar como aprobado (tachado)
     tarjeta.addEventListener("click", () => {
       tarjeta.classList.toggle("aprobado");
     });
