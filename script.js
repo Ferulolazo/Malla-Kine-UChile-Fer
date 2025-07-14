@@ -41,7 +41,7 @@ h1 {
   color: #333;
 }
 
-.ramo {
+.ramos {
   background-color: #ffe6f0;
   border: 1px solid #ccc;
   margin-bottom: 10px;
@@ -54,20 +54,20 @@ h1 {
   transition: all 0.2s ease-in-out;
 }
 
-.ramo:hover {
+.ramos:hover {
   transform: scale(1.03);
 }
 
-.ramo.aprobado {
+.ramos.aprobado {
   text-decoration: line-through;
   opacity: 0.5;
 }
 
-.ramo[data-tipo="formacion"] {
+.ramos[data-tipo="formacion"] {
   background-color: #e0e0e0;
 }
 
-.ramo[data-tipo="investigacion"] {
+.ramos[data-tipo="investigacion"] {
   background-color: #d6f0ff;
 }
 
