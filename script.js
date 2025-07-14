@@ -5,8 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
     console.error("La variable 'ramos' no está definida. Verifica si 'data.js' está cargado antes.");
     return;
   }
-
-  // Crear contenedor por semestre
   for (let i = 1; i <= 10; i++) {
     const columna = document.createElement("div");
     columna.classList.add("semestre");
@@ -18,8 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     contenedor.appendChild(columna);
   }
-
-  // Agregar los ramos en sus columnas correspondientes
   ramos.forEach((ramo) => {
     const columna = document.querySelector(`.semestre[data-semestre="${ramo.semestre}"]`);
     if (!columna) return;
@@ -28,8 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
     tarjeta.classList.add("ramo");
     tarjeta.dataset.tipo = ramo.tipo;
     tarjeta.textContent = ramo.nombre;
-
-    // Mostrar créditos al pasar el mouse
+  }
     const popup = document.createElement("span");
     popup.classList.add("creditos-popup");
     popup.textContent = `${ramo.creditos} créditos`;
@@ -42,8 +37,6 @@ document.addEventListener("DOMContentLoaded", () => {
     tarjeta.addEventListener("mouseleave", () => {
       popup.style.display = "none";
     });
-
-    // Marcar como aprobado (check manual)
     tarjeta.addEventListener("click", () => {
       tarjeta.classList.toggle("aprobado");
     });
