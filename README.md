@@ -1,1 +1,0 @@
-# Malla-Kinesiologia-UChile-Fer
