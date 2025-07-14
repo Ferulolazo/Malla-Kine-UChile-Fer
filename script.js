@@ -1,9 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
   const contenedor = document.getElementById("malla-container");
-
-  if (typeof ramos === "undefined") {
-    console.error("La variable 'ramos' no está definida. Verifica si 'data.js' está cargado antes.");
-    return;
   }
   for (let i = 1; i <= 10; i++) {
     const columna = document.createElement("div");
